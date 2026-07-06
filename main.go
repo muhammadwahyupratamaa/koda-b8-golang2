@@ -20,6 +20,7 @@ type Hello struct{
 }
 
 
+// Soal 3
 
 type Obj struct {
 	str [][][]Man 
@@ -34,17 +35,22 @@ type Tech struct {
 	tech Academy
 }
 
-
-
-
+// Soal 4
+type My struct{
+	favourite []Favourite
+}
+type Favourite struct{
+	fruit Fruit
+}
+type Fruit struct{
+	is string
+}
 
 // Soal 5
 type Number struct {
 	first [] int
 	second [] int
 }
-
-
 
 
 func main() {
@@ -84,8 +90,17 @@ obj := Obj{
 
 
 // Soal 4
-
-
+my := []My{
+	{
+		favourite: []Favourite{
+			{},{},{},{
+				fruit: Fruit{
+					is: "Apple",
+				},
+			},
+		},
+	},
+}
 
 
 // Soal 5
@@ -95,12 +110,12 @@ num := Number{
 	},
 	second: []int{
 		10,17,17,
-
 	},
 }
 
 fmt.Println(we.are.the.best)
 fmt.Println(hello.world)
 fmt.Println(obj.str[3][1][2].man[0].tech.academy)
+fmt.Println(my[0].favourite[3].fruit.is)
 fmt.Println(num.first[1] + num.second[2])
 }
