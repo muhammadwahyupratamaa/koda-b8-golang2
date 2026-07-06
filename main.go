@@ -21,13 +21,21 @@ type Hello struct{
 
 
 
-// type Obj struct {
-// 	str [] 
-// }
+type Obj struct {
+	str [][][]Man 
+}
+type Man struct {
+	man [] Tech
+}
+type Academy struct {
+	academy string
+}
+type Tech struct {
+	tech Academy
+}
 
-// type Academy struct {
-// 	academy string
-// }
+
+
 
 
 // Soal 5
@@ -40,6 +48,7 @@ type Number struct {
 
 
 func main() {
+// Soal 1 
 we := We{
 	are: Are{
 		the: The{
@@ -48,10 +57,38 @@ we := We{
 	} ,
 }
 
+// Soal 2
+
 hello := Hello{
 	world : "Hello World",
 }
 
+// Soal 3
+obj := Obj{
+	str: [][][]Man{
+		{},{},{},{
+			{}, {
+				{},{},{
+					man:[]Tech{
+						{
+							tech: Academy{
+								academy: "Tech Academy",
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+}
+
+
+// Soal 4
+
+
+
+
+// Soal 5
 num := Number{
 	first: []int{
 		10,15,30,
@@ -64,5 +101,6 @@ num := Number{
 
 fmt.Println(we.are.the.best)
 fmt.Println(hello.world)
+fmt.Println(obj.str[3][1][2].man[0].tech.academy)
 fmt.Println(num.first[1] + num.second[2])
 }
